@@ -11,20 +11,46 @@ html{
 
 body{
     background: #f8f9ff;
+    padding-top: 80px;
 }
 
 /* NAVBAR */
 
 .navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 80px;
     background: white;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all .3s ease;
 }
 
-.T {
+.navbar.sticky{
+    padding: 15px 80px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, .98);
+}
+
+.hamburger{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span{
+    width: 28px;
+    height:3px;
+    background: #333;
+    border-radius: 5px;
+}
+
+.logo {
     font-size: 24px;
     font-weight: 700;
     color: #2d2d2d;
@@ -166,15 +192,25 @@ body{
         font-size: 48px;
     }
 
-    .navbar {
-        flex-direction: column;
-        gap: 20px;
+    .hamburger{
+        display: flex;
     }
 
     .nav-items {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        display: none;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-items.active{
+        display: flex;
     }
 }
 
@@ -186,6 +222,7 @@ body{
     }
 
     .nav-items {
+        z-index: 1001;
         gap: 15px;
         font-size: 14px;
     }
@@ -223,6 +260,8 @@ body{
         font-size: 28px;
     }
 }
+
+/* About */
 
 .about{
     padding: 100px 8%;
@@ -312,6 +351,10 @@ body{
 
     .about{
         padding:70px 20px;
+    }
+
+    .about-container{
+        flex-direction: column;
     }
 
     .section-title h2{
@@ -462,6 +505,10 @@ body{
 
     .skills{
         padding:70px 20px;
+    }
+
+    .skills-wrapper{
+        flex-direction: column;
     }
 
     .skills-column{
@@ -690,6 +737,10 @@ body{
 
     .contact{
         padding:70px 20px;
+    }
+
+    .contact-container{
+        flex-direction: column;
     }
 
     .contact-item{
