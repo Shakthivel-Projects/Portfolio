@@ -8,11 +8,17 @@
 </head>
 <body>
 
+    <div id="loader">
+        <div class="spinner">
+            <h2>Building Experiences....</h2>
+        </div>
+    </div>
+
     <header>
         <nav class="navbar">
             <div class="logo">My Portfolio</div>
             <ul class="nav-items" id="navItems">
-                <li><a href="#home">Home</a></li>
+                <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -24,12 +30,15 @@
                 <span></span>
                 <span></span>
             </div>
+            <button id="themeToggle">
+                🌙
+            </button>
         </nav>
     </header>
     
     <!--  Home Section  -->
 
-    <section class="home" id="home">
+    <section class="home hidden" id="home">
         <div class="home-content">
             <h2>Hi, I'm</h2>
 
@@ -57,7 +66,7 @@
 
     <!--   About Section   -->
     
-    <section class="about" id="about">
+    <section class="about hidden" id="about">
         <div class="section-title">
             <h2>About Me</h2>
         </div>
@@ -96,7 +105,7 @@
         </div>
     </section>
 
-    <section class="skills" id="skills">
+    <section class="skills hidden" id="skills">
 
     <div class="section-title">
         <h2>My Skills</h2>
@@ -247,7 +256,7 @@
 
     <!-- Projects Section -->
 
-    <section class="projects" id="projects">
+    <section class="projects hidden" id="projects">
         <div class="section-title">
             <h2>My Project</h2>
         </div>
@@ -334,7 +343,7 @@
 
     <!--  Contact Section  -->
 
-    <section class="contact" id="contact">
+    <section class="contact hidden" id="contact">
         <div class="section-title">
             <h2>Contact Me</h2>
         </div>
@@ -401,6 +410,12 @@
         </p>
 
     </footer>
+
+    <button id="topBtn">
+
+    ↑
+
+    </button>
 
     <script src="script.js"></script>
 
