@@ -47,9 +47,10 @@ body{
 .home {
     min-height: 85vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 50px 100px;
+    gap: 50px;
+    padding: 50px 8%;
 }
 
 .home-content {
@@ -97,8 +98,9 @@ body{
 /* Image */
 
 .home-image img {
-    width: 320px;
-    height: 320px;
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid white;
@@ -113,4 +115,107 @@ body{
     radial-gradient(circle at 50% -20px,
     transparent 70px,
     #e6e8ff 71px);
+}
+
+
+@media screen and (max-width: 1024px) {
+    
+    .home-content h1 {
+        font-size: 52px;
+    }
+
+    .home-content h2 {
+        font-size: 28px;
+    }
+
+    .home-content h3 {
+        font-size: 24px;
+    }
+
+    .home-image img {
+        max-width: 280px;
+    }
+
+    .navbar {
+        padding: 20px 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .home{
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+        padding: 50px 30px;
+    }
+
+    .home-content {
+        width: 100%;
+    }
+
+    .home-image {
+        margin-bottom: 5%;
+    }
+
+    .home-content h1 {
+        font-size: 48px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-items {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    
+    .navbar{
+        padding: 20px;
+    }
+
+    .nav-items {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .home{
+        padding: 30px 20px;
+    }
+
+    .home-content h1 {
+        font-size: 36px;
+    }
+
+    .home-content h2 {
+        font-size: 24px;
+    }
+
+    .home-content h3 {
+        font-size: 20px;
+    }
+
+    .home-content p {
+        font-size: 15px;
+    }
+
+    .btn{
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .home-image img {
+        max-width: 220px;
+    }
+
+    .scroll{
+        font-size: 28px;
+    }
 }
